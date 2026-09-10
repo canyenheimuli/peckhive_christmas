@@ -63,10 +63,27 @@ for gifter in persons:
   rotating_assignments[gifter] = recipients
 
 ## UI
+# Custom CSS (increase width)
+st.markdown(
+    """
+    <style>
+    .widened-container {
+        max-width: 750px;
+        width:     100%;
+        margin:    0 auto; 
+        padding:   10px;  
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown('<div class="widened-container">', unsafe_allow_html=True)
+
 # Headers
 st.title("Peckhive Christmas Gifting Schedule")
 
 st.markdown("""
+<div style='text-align: center;'>
 ❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️<br>
 🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔<br>
 ❄️🔔🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🔔❄️<br>
@@ -78,6 +95,7 @@ st.markdown("""
 ❄️🔔🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🔔❄️<br>
 🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔<br>
 ❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️<br>
+</div>
 """, unsafe_allow_html=True)
 
 # Select Box
@@ -115,3 +133,6 @@ else:
     
   # Display
   st.dataframe(assignments_year, use_container_width=True, hide_index = True)
+
+# End CSS Wrapping
+st.markdown('</div>', unsafe_allow_html=True)
