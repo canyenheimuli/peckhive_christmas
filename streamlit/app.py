@@ -68,7 +68,7 @@ st.html(
     """
     <style>
         .stMainBlockContainer {
-            max-width: 1000px !important;
+            max-width: 800px !important;
             margin:    0 auto;
         }
     </style>
