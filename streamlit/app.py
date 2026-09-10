@@ -63,21 +63,17 @@ for gifter in persons:
   rotating_assignments[gifter] = recipients
 
 ## UI
-# Custom CSS (increase width)
-st.markdown(
+# Custom CSS for Widening Page
+st.html(
     """
     <style>
-    .widened-container {
-        max-width: 2000px;
-        width:     100%;
-        margin:    0 auto; 
-        padding:   10px;  
-    }
+        .stMainBlockContainer {
+            max-width: 1000px !important;
+            margin:    0 auto;
+        }
     </style>
-    """,
-    unsafe_allow_html=True
+    """
 )
-st.markdown('<div class="widened-container">', unsafe_allow_html=True)
 
 # Headers
 st.title("Peckhive Christmas Gifting Schedule")
@@ -95,6 +91,7 @@ st.markdown("""
 ❄️🔔🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🔔❄️<br>
 🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔<br>
 ❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️🔔❄️<br>
+<br>
 </div>
 """, unsafe_allow_html=True)
 
@@ -133,6 +130,3 @@ else:
     
   # Display
   st.dataframe(assignments_year, use_container_width=True, hide_index = True)
-
-# End CSS Wrapping
-st.markdown('</div>', unsafe_allow_html=True)
