@@ -68,7 +68,7 @@ st.markdown(
     """
     <style>
     .widened-container {
-        max-width: 750px;
+        max-width: 1200px;
         width:     100%;
         margin:    0 auto; 
         padding:   10px;  
