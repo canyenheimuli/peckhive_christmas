@@ -80,7 +80,7 @@ st.title("Peckhive Christmas Gifting Schedule")
 
 st.markdown("""
 <div style="
-    font-size:  clamp(14px, 2vw, 18px);
+    font-size:  clamp(12px, 2vw, 16px);
     text-align: center;
     width:      100%;
 ">
